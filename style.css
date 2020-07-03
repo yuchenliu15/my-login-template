@@ -4,6 +4,8 @@ html, body {
 
 body {
     margin: 0;
+    background-attachment: fixed;
+    background-image: linear-gradient(to right, #2e86de, #82ccdd);
 }
 
 * {
@@ -15,7 +17,7 @@ body {
 .container {
     display: grid;
     grid-template-rows: 50px 100px 500px 200px;
-    grid-template-areas: 
+    grid-template-areas:
         "nav nav nav"
         ". . ."
         "body body body"
@@ -26,6 +28,7 @@ nav {
     grid-area: nav;
     box-shadow: 0 0 3px #95a5a6;
     margin: 0;
+    background-color: white;
 }
 
 nav ul {
@@ -45,16 +48,34 @@ nav a:visited {
     color: black;
 }
 
+.login-container:before {
+    background: inherit;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+}
+
 .login-container {
+    position: relative;
+    z-index: 1;
+    background: inherit;
     grid-area: body;
     width: 500px;
     margin: auto;
-    box-shadow: 0 0 3px #95a5a6;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);   
     padding: 20px;
     padding-left: 80px;
     padding-right: 80px;
     padding-bottom: 70px;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .login-container form {
@@ -64,19 +85,20 @@ nav a:visited {
 }
 
 .login-container form input {
+    color: white;
     margin-bottom: 20px;
-    background-color: #f1f2f6;
-    border: 0;
+    background-color: transparent;
+    border: solid 1px white;
     border-radius: 10px;
     height: 40px;
     padding: 20px;
 }
 
 .login-container form button {
-    background-color: white; /* Green */
+    background-color: transparent;
     border: none;
-    color: #1e3799;
-    border: solid 1px #1e3799;
+    color: #2e86de;
+    border: solid 1px #2e86de;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -90,12 +112,12 @@ nav a:visited {
 
 .login-container form button:hover {
     cursor: pointer;
-    background-color: #1e3799;
+    background-color: #2e86de;
     color: white
 }
 
 .login-container form h1 {
-    color: #747d8c;
+    color: white;
     font-size: 4em;
     margin-bottom: 50px;
 }
