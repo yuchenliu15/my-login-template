@@ -1,21 +1,27 @@
+html, body {
+    height: 100%;
+}
+
 * {
     box-sizing: border-box;
     font-family: Roboto;
 
 }
 
-
-
 .container {
     display: grid;
+    grid-template-rows: 50px 100px 500px 200px;
     grid-template-areas: 
         "nav nav nav"
         ". . ."
-        "body body body";
+        "body body body"
+        "footer footer footer";
 }
 
 nav {
     grid-area: nav;
+    box-shadow: 0 0 3px #95a5a6;
+
 }
 
 nav ul {
@@ -55,6 +61,7 @@ nav a:visited {
     border: 0;
     border-radius: 10px;
     height: 40px;
+    padding: 20px;
 }
 
 .login-container form button {
