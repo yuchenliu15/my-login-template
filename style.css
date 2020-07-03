@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "nav nav nav"
+        ". . ."
+        "body body body";
+}
+
+nav {
+    grid-area: nav;
+    font-family: Roboto;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.login-container {
+    grid-area: body;
+}
