@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    font-family: Roboto;
+
 }
 
 
@@ -14,13 +16,29 @@
 
 nav {
     grid-area: nav;
-    font-family: Roboto;
 }
 
 nav ul {
     list-style: none;
 }
 
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: black;
+}
+
 .login-container {
     grid-area: body;
+    width: 500px;
+    margin: auto;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
